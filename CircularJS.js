@@ -251,7 +251,7 @@ function TestContract(Blockchain, From, Project) {
      "Blockchain" : HexFix(Blockchain),
            "From" : HexFix(From),
       "Timestamp" : getFormattedTimestamp(), 
-        "Project" : StringToHex(Project),
+        "Project" : stringToHex(Project),
         "Version" : Version
     }
     
