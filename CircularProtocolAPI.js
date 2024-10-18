@@ -878,7 +878,7 @@ async function getPendingTransaction(blockchain, TxID) {
  *   
  *   if End = 0 Start indicates the number of blocks starting from the last block minted 
  */
-async function getTransactionByID(blockchain, TxID, start, end) {
+async function getTransactionbyID(blockchain, TxID, start, end) {
     
     let data = {
         "Blockchain": hexFix(blockchain),
@@ -917,7 +917,7 @@ async function getTransactionByID(blockchain, TxID, start, end) {
  *   
  * if End = 0 Start indicates the number of blocks starting from the last block minted 
  */
-async function getTransactionByNode(blockchain, nodeID, start, end) {
+async function getTransactionbyNode(blockchain, nodeID, start, end) {
 
     let data = {
         "Blockchain": hexFix(blockchain),
@@ -955,7 +955,7 @@ async function getTransactionByNode(blockchain, nodeID, start, end) {
  *   
  * if End = 0 Start indicates the number of blocks starting from the last block minted 
  */
-async function getTransactionByAddress(blockchain, address, start, end) {
+async function getTransactionbyAddress(blockchain, address, start, end) {
 
     let data = {
         "Blockchain": hexFix(blockchain),
@@ -992,7 +992,7 @@ async function getTransactionByAddress(blockchain, address, start, end) {
  *  endDate: End date
  *   
  */
-async function getTransactionByDate(Blockchain, Address, StartDate, EndDate) {
+async function getTransactionbyDate(Blockchain, Address, StartDate, EndDate) {
     let data = {
         "Blockchain": hexFix(Blockchain),
         "Address": hexFix(Address),
@@ -1144,10 +1144,10 @@ function getTransactionOutcome(blockchain, TxID, timeoutSec) {
              getAnalytics : getAnalytics,
            getBlockchains : getBlockchains,
     getPendingTransaction : getPendingTransaction,
-       getTransactionByID : getTransactionByID,
-     getTransactionByNode : getTransactionByNode,
-  getTransactionByAddress : getTransactionByAddress,
-     getTransactionByDate : getTransactionByDate,
+       getTransactionbyID : getTransactionbyID,
+     getTransactionbyNode : getTransactionbyNode,
+  getTransactionbyAddress : getTransactionbyAddress,
+     getTransactionbyDate : getTransactionbyDate,
           sendTransaction : sendTransaction,
     getTransactionOutcome : getTransactionOutcome
                 
