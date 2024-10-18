@@ -1,74 +1,73 @@
+
 # Circular Layer 1 Blockchain Protocol Interface Library
 
-The Circular Layer 1 Blockchain Protocol Interface Library is a JavaScript library designed to integrate seamlessly with Circular's blockchain platforms. This open-source library, maintained by Circular Global Ledgers, Inc., provides a comprehensive suite of tools for interacting with blockchain networks, managing wallets, assets, smart contracts, and more.
+The **Circular Layer 1 Blockchain Protocol Interface Library** is a powerful JavaScript library developed by Circular Global Ledgers, Inc. for seamless integration with the Circular blockchain ecosystem. This open-source library offers a comprehensive suite of tools designed for efficient and secure interaction with blockchain networks, managing wallets, assets, smart contracts, and more.
 
-## Features
+## 🔥 **Key Features**
 
-- **Blockchain Interaction**: Directly interact with Circular's blockchain networks.
-- **Smart Contracts**: Deploy, test, and interact with smart contracts.
-- **Wallet Management**: Create, retrieve, and manage blockchain wallets and balances.
-- **Asset Management**: Handle asset transactions, including creation, transfer, and retrieval of asset details.
-- **Domains Management**: Resolve domain names to wallet addresses.
-- **Transaction Management**: Send, search, and validate transactions.
-- **Analytics**: Retrieve analytical data about the blockchain.
+- **Blockchain Interaction**: Effortlessly connect and interact with Circular's blockchain networks, enabling various network operations.
+- **Smart Contracts**: Deploy, test, and interact with smart contracts with ease and efficiency.
+- **Wallet Management**: Create, retrieve, and manage blockchain wallets, track balances, and execute wallet operations.
+- **Asset Management**: Issue and manage assets, handle transfers, and retrieve detailed information about assets and their supply.
+- **Domain Management**: Resolve blockchain domain names to wallet addresses, ensuring a secure and reliable address lookup.
+- **Transaction Management**: Send transactions, track status, search and validate transactions within the blockchain.
+- **Analytics**: Access and retrieve analytical data and insights related to blockchain performance and activities.
 
-## Installation
+## 🚀 **Getting Started**
 
-To use the Circular Library in your project, include it directly in your HTML or JavaScript file:
+### Installation
+
+To integrate the Circular library into your project, include the library directly in your HTML or JavaScript files:
 
 ```html
 <script src="path_to_circular_library.js"></script>
+```
 
+Ensure you also load dependencies like `crypto-js`, `elliptic` and `sha256` from CDN:
 
-Usage
-Setting Up
+```html
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/elliptic/6.5.4/elliptic.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-sha256@0.9.0/build/sha256.min.js"></script>
+```
 
-// Set your Network Access Gateway key
-Circular.SetNAGKey('your_nag_key');
+## 📜 **API Reference**
 
+For detailed information on all available methods and parameters, refer to the [API Documentation](https://circular-protocol.gitbook.io/circular-sdk/api-docs/javascript). Below is a summary of key functions:
 
+- **`setNAGKey(key)`**: Sets the Network Access Gateway key.
+- **`registerWallet(blockchain, publicKey)`**: Registers a wallet on the specified blockchain.
+- **`getWalletBalance(blockchain, address, asset)`**: Retrieves the balance of a specific asset for the given wallet.
+- **`sendTransaction(id, from, to, timestamp, type, payload, nonce, signature, blockchain)`**: Sends a transaction on the specified blockchain.
 
-Managing Wallets
+... and many more!
 
-// Register a new wallet on the blockchain
-Circular.RegisterWallet('blockchain_id', 'public_key').then(response => {
-    console.log(response);
-});
+## 🤝 **Contributing**
 
-// Get wallet balance
-Circular.GetWalletBalance('blockchain_id', 'wallet_address', 'asset_name').then(balance => {
-    console.log(balance);
-});
+Contributions to the Circular Library are welcome! To contribute:
 
+1. Fork the repository.
+2. Create a feature branch (`git checkout -b feature-name`).
+3. Commit your changes (`git commit -m 'Add new feature'`).
+4. Push to the branch (`git push origin feature-name`).
+5. Open a Pull Request.
 
-Handling Transactions
+Ensure to follow the contribution guidelines and code of conduct.
 
-// Send a transaction
-Circular.SendTransaction('transaction_id', 'from_address', 'to_address', 'timestamp', 'type', 'payload', 'nonce', 'signature', 'blockchain_id');
+## 📄 **License**
 
-Smart Contracts
+This project is open-source and available under the MIT License for both private and commercial use.
 
-// Test a smart contract
-Circular.TestContract('blockchain_id', 'developer_wallet_address', 'smart_contract_project').then(testResults => {
-    console.log(testResults);
-});
+## 📌 **Version**
 
+- Current Version: **1.0.8**
+- Last Update: **10/18/2024**
 
-Contributing
-Contributions to the Circular Library are welcome. Please ensure to follow the contribution guidelines and code of conduct.
+## 👥 **Authors and Acknowledgment**
 
-License
-This project is open source and available under the LICENSE for both private and commercial use.
+- **Originator**: Gianluca De Novi, PhD
+- **Contributors**: Danny De Novi
 
-Version
-1.0.7
+## 📧 **Contact**
 
-Authors and Acknowledgment
-Originator: Gianluca De Novi, PhD
-Contributors: [Add contributors here]
-Contact
-For support or collaboration, please contact info@circularlabs.io.
-
-
-
-This README file outlines the main features and usage of the library, providing a comprehensive guide for developers interested in utilizing the Circular blockchain interfaces. Adjust the paths and names as per your actual project setup.
+For support or collaboration opportunities, please reach out to [info@circularlabs.io](mailto:info@circularlabs.io).
