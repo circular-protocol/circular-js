@@ -646,6 +646,9 @@ async function getVoucher(blockchain, code) {
         "Version": Version
     };
 
+    if (code.startsWith('0x')) { code = code.slice(2); }
+
+
     try {
         const response = await fetch(NAG_URL + 'Circular_GetVoucher_' + NETWORK_NODE, {
             method: 'POST',
