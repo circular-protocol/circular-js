@@ -9,8 +9,8 @@
         Version : 1.0.8
                      
         Creation: 7/12/2022
-        Update  : 10/15/2024
-                  
+        Update  : 28/01/2025
+        
         Originator: Gianluca De Novi, PhD
         Contributors: Danny De Novi           
         
@@ -640,13 +640,16 @@ async function getAssetSupply(blockchain, name) {
  *  Code: voucher code
  */
 async function getVoucher(blockchain, code) {
+
+    code = String(code);
+    if (code.startsWith('0x')) { code = code.slice(2); }
+
     let data = {
         "Blockchain": hexFix(blockchain),
-        "Code": String(code),
+        "Code": code,
         "Version": Version
     };
 
-    if (code.startsWith('0x')) { code = code.slice(2); }
 
 
     try {
